@@ -1,4 +1,4 @@
-#include "main.h"
+#include "alx.h"
 #include <stdlib.h>
 
 /**
