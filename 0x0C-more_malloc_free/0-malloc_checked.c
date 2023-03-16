@@ -1,19 +1,18 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "alx.h"
-
 /**
- * malloc_checked - function that allocates memory using malloc
- * @b: sizeof int
- * Return: nothing
+ * malloc_checked - Entry Point
+ * @b: input amount
+ * Return: pointer to new mem
  */
-
 void *malloc_checked(unsigned int b)
 {
-	void *al;
+	void *n;
 
-	al = malloc(b);
-	if (al == NULL)
+	n = malloc(b);
+
+	if (n == NULL)
 		exit(98);
-	else
-		return (al);
+	return (n);
 }
