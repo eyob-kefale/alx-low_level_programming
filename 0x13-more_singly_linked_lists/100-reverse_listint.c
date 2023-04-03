@@ -1,6 +1,3 @@
-
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 /**
  * *reverse_listint - function to reverse order of nodes
