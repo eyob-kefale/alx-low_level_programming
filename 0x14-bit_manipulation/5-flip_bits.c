@@ -1,26 +1,27 @@
-#include "holberton.h"
-#include <stdio.h>
-
-/**
- * flip_bits -  function that returns the number of bits you would need to flip
- * to get from one number to another.
- * @n: number 1;
- * @m: number 2;
- * Return: thenumber of buts needed to flip
+/*
+ * File: 5-flip_bits.c
+ * Auth: Gedeon Obae Gekonge
  */
 
+#include "main.h"
+
+/**
+ * flip_bits - Counts the number of bits needed to be
+ *             flipped to get from one number to another.
+ * @n: The number.
+ * @m: The number to flip n to.
+ *
+ * Return: The necessary number of bits to flip to get from n to m.
+ */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int count;
-	unsigned long int c_num;
+	unsigned long int xor = n ^ m, bits = 0;
 
-	c_num = n ^ m;
-	count = 0;
-	while (c_num > 0)
+	while (xor > 0)
 	{
-		if ((c_num & 1) != 0)
-			count++;
-		c_num = c_num >> 1;
+		bits += (xor & 1);
+		xor >>= 1;
 	}
-	return (count);
+
+	return (bits);
 }
